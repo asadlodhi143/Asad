@@ -11,7 +11,7 @@ display_url: https://asadkhan.netlify.app
 collections:
   - name: "blog"
     label: "Blog Posts"
-    folder: "site/posts"
+    folder: "posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
