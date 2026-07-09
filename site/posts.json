@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "slug": "get-job-in-2026",
+    "file": "2026-07-09-get-job-in-2026.md",
+    "title": "Get job In 2026",
+    "date": "July 9, 2026",
+    "rawDate": "2026-07-09T11:36:00.000+05:00",
+    "category": "Meta Ads",
+    "summary": "hi class",
+    "thumbnail": "/images/blog/chatgpt-image-jun-29-2026-06_09_33-pm.png",
+    "tags": [],
+    "readTime": "1 min read",
+    "featured": true,
+    "bodyHtml": "<p>hi</p>"
+  },
+  {
+    "id": 2,
+    "slug": "how-i-built-my-portfolio-free",
+    "file": "2026-07-01-how-i-built-my-portfolio-free.md",
+    "title": "How I Built My Freelance Portfolio Website for Free",
+    "date": "July 1, 2026",
+    "rawDate": "2026-07-01",
+    "category": "Web Development",
+    "summary": "I built a fully professional portfolio website with a contact form, voice intro, WhatsApp chat button — all for PKR 0. Here's exactly how I did it and what tools I used.",
+    "thumbnail": "/images/asad-desk.png",
+    "tags": [
+      "portfolio",
+      "github pages",
+      "freelancing",
+      "web development"
+    ],
+    "readTime": "2 min read",
+    "featured": false,
+    "bodyHtml": "<p>When I first started thinking about freelancing, I knew I needed one thing more than anything else — a professional online presence. Not just a LinkedIn profile. A real website with my name on it.</p>\n<p>The problem? I had zero budget.</p>\n<p>So I decided to figure it out myself. And I did — completely free.</p>\n<h2>What I Built</h2>\n<p>A full professional portfolio website with:</p>\n<ul><li>Animated hero section with my photo</li>\n<li>Voice intro that speaks when visitors land on the page</li>\n<li>Skills, Experience, Projects, and Certifications sections</li>\n<li>A working contact form that sends messages directly to my Gmail</li>\n<li>A WhatsApp floating chat button</li>\n<li>A 3D \"Hire Me\" modal form</li>\n<li>A Thank You page after form submission</li>\n</ul>\nAll of it — completely free. No hosting fee. No domain fee. No monthly bill.\n<h2>Tools I Used (All Free)</h2>\n<p><strong>GitHub Pages</strong> — Free hosting forever. You push your HTML files to a GitHub repository and your site goes live at `username.github.io`. No credit card, no expiry.</p>\n<p><strong>Formspree</strong> — Free contact form backend. When someone fills your form, the message goes straight to your Gmail. Free plan allows 50 submissions per month which is more than enough when starting out.</p>\n<p><strong>Font Awesome</strong> — Free icons for the entire site.</p>\n<p><strong>Google Fonts</strong> — Free premium typography.</p>\n<h2>The Biggest Lesson</h2>\n<p>You don't need money to start. You need consistency and the willingness to learn.</p>\n<p>I went from zero to a live professional website in a few days of learning. Every problem I ran into, I researched, figured out, and solved. That problem-solving process itself is a skill that makes you a better marketer and developer.</p>\n<p>If you're a freelancer with no budget — start here. Build your portfolio first. Everything else follows.</p>\n<hr/>\n<p><em>Currently learning Meta and Google Ads through SenatorWeRunAds.com. Follow my journey on Instagram @asadlodhi_143</em></p>"
+  },
+  {
+    "id": 3,
+    "slug": "5-lessons-from-internship",
+    "file": "2026-06-15-5-lessons-from-internship.md",
+    "title": "5 Things I Learned in My Digital Marketing Internship",
+    "date": "June 15, 2026",
+    "rawDate": "2026-06-15",
+    "category": "Digital Marketing",
+    "summary": "After completing my internship at KB Digital Marketing Agency, here are the 5 most valuable real-world lessons that no course ever taught me.",
+    "thumbnail": "/images/asad-headshot.png",
+    "tags": [
+      "internship",
+      "digital marketing",
+      "lessons",
+      "beginner"
+    ],
+    "readTime": "2 min read",
+    "featured": false,
+    "bodyHtml": "<p>I recently completed my internship at KB Digital Marketing Agency. One month of real work, real clients, and real pressure.</p>\n<p>Here are the 5 most honest lessons I learned — things no YouTube video or course prepared me for.</p>\n<h2>1. Consistency Beats Perfection Every Time</h2>\n<p>I used to spend hours perfecting one post. My manager told me something that changed my mindset completely:</p>\n<p><em>\"A good post published today beats a perfect post published never.\"</em></p>\n<p>In digital marketing, momentum matters more than perfection. Algorithms reward consistency. Audiences reward showing up.</p>\n<h2>2. The Caption Matters More Than the Design</h2>\n<p>We spent days on beautiful graphics. Then a simple text-based post with a strong caption got 10x the engagement.</p>\n<p>Copy is king. Learn to write — it's the highest ROI skill in digital marketing.</p>\n<h2>3. You Can't Improve What You Don't Measure</h2>\n<p>Before my internship, I was posting content with no idea what was working. At the agency, everything had a number attached to it — reach, engagement rate, click-through rate, conversion.</p>\n<p>Start tracking from day one. Even simple notes in a spreadsheet count.</p>\n<h2>4. Clients Buy Confidence, Not Just Skills</h2>\n<p>I watched how senior team members communicated with clients. They were clear, confident, and never over-promised.</p>\n<p>Being a good marketer isn't enough. You need to communicate your value clearly. Work on this as much as your technical skills.</p>\n<h2>5. The Learning Never Stops</h2>\n<p>The platform that worked last month might not work this month. Algorithms change. Trends shift. Consumer behavior evolves.</p>\n<p>The marketers who win are the ones who stay curious and keep learning. That's why I'm currently deep into paid ads training at SenatorWeRunAds.com even after finishing my internship.</p>\n<hr/>\n<p>If you're about to start an internship or just finished one — I hope these lessons save you some of the confusion I went through.</p>\n<p><em>Drop me a message on WhatsApp or LinkedIn if you want to talk digital marketing.</em></p>"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "name": "asad-khan-portfolio",
+  "version": "1.0.0",
+  "description": "Asad Khan Portfolio & Blog",
+  "scripts": {
+    "build": "node build-posts.js"
+  }
+}

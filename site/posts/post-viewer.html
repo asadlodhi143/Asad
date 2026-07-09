@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Post | Asad Khan</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--red:#FF2D2D;--black:#0A0A0A;--white:#fff;--grey:#888;--card-dark:#181818;--card-border:#2A2A2A;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--red);border-radius:2px;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:16px 40px;background:rgba(10,10,10,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.05);}
+.nav-logo{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;}
+.nav-right{display:flex;align-items:center;gap:16px;}
+.back-btn{display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,0.15);color:#ccc;padding:8px 18px;border-radius:50px;font-size:0.82rem;transition:all 0.2s;}
+.back-btn:hover{border-color:var(--red);color:var(--white);}
+.btn-hire{background:var(--white);color:var(--black);padding:9px 22px;border-radius:50px;font-size:0.85rem;font-weight:600;transition:all 0.2s;}
+.btn-hire:hover{background:var(--red);color:var(--white);}
+
+/* Loading */
+.loading-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:var(--grey);}
+.spinner{width:44px;height:44px;border:3px solid var(--card-border);border-top-color:var(--red);border-radius:50%;animation:spin 0.8s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Post Hero */
+.post-hero{padding:120px 20px 60px;text-align:center;max-width:760px;margin:0 auto;}
+.post-cat{display:inline-flex;align-items:center;gap:8px;background:rgba(255,45,45,0.1);border:1px solid rgba(255,45,45,0.25);padding:5px 14px;border-radius:50px;font-size:0.78rem;color:var(--red);font-weight:600;text-transform:uppercase;margin-bottom:20px;}
+.post-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.15;margin-bottom:20px;}
+.post-meta{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;color:var(--grey);font-size:0.82rem;}
+.post-meta span{display:flex;align-items:center;gap:6px;}
+.post-meta i{color:var(--red);}
+.post-author{display:flex;align-items:center;gap:10px;margin-top:24px;justify-content:center;}
+.post-author img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid rgba(255,45,45,0.4);}
+.post-author-info strong{font-size:0.88rem;display:block;}
+.post-author-info span{font-size:0.75rem;color:var(--grey);}
+
+/* Thumbnail */
+.post-thumb{max-width:760px;margin:0 auto;padding:0 20px;}
+.post-thumb img{width:100%;border-radius:20px;object-fit:cover;object-position:top;max-height:420px;border:1px solid var(--card-border);}
+
+/* Content */
+.post-content{max-width:720px;margin:0 auto;padding:50px 20px 100px;}
+.post-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:40px;}
+.post-tag{background:#1a1a1a;border:1px solid var(--card-border);padding:5px 14px;border-radius:6px;font-size:0.78rem;color:#aaa;}
+
+/* Body typography */
+.post-body h1,.post-body h2{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;margin:40px 0 16px;color:var(--white);}
+.post-body h3{font-size:1.15rem;font-weight:700;margin:28px 0 12px;color:var(--white);}
+.post-body p{color:#bbb;font-size:1rem;line-height:1.85;margin-bottom:20px;}
+.post-body ul,.post-body ol{color:#bbb;font-size:1rem;line-height:1.85;margin-bottom:20px;padding-left:24px;}
+.post-body li{margin-bottom:8px;}
+.post-body strong{color:var(--white);font-weight:700;}
+.post-body em{color:#aaa;}
+.post-body blockquote{border-left:3px solid var(--red);padding:16px 20px;background:rgba(255,45,45,0.06);border-radius:0 12px 12px 0;margin:28px 0;color:#ddd;font-style:italic;font-size:1.05rem;}
+.post-body hr{border:none;border-top:1px solid var(--card-border);margin:40px 0;}
+.post-body img{max-width:100%;border-radius:12px;margin:20px 0;}
+
+/* Share */
+.share-strip{background:var(--card-dark);border:1px solid var(--card-border);border-radius:16px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px;}
+.share-strip h4{font-size:1rem;font-weight:700;}
+.share-strip p{font-size:0.82rem;color:var(--grey);margin-top:4px;}
+.share-btns{display:flex;gap:10px;}
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:50px;font-size:0.8rem;font-weight:600;transition:all 0.2s;}
+.share-btn.wa{background:rgba(37,211,102,0.1);color:#25d366;border:1px solid rgba(37,211,102,0.3);}
+.share-btn.wa:hover{background:rgba(37,211,102,0.2);}
+.share-btn.li{background:rgba(0,119,181,0.1);color:#0077b5;border:1px solid rgba(0,119,181,0.3);}
+.share-btn.li:hover{background:rgba(0,119,181,0.2);}
+
+/* More posts */
+.more-posts h3{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:20px;}
+.more-posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+.more-post-card{background:var(--card-dark);border:1px solid var(--card-border);border-radius:14px;padding:20px;transition:all 0.2s;cursor:pointer;}
+.more-post-card:hover{border-color:rgba(255,45,45,0.4);transform:translateY(-3px);}
+.more-post-cat{font-size:0.72rem;color:var(--red);font-weight:700;margin-bottom:8px;}
+.more-post-card h4{font-size:0.9rem;font-weight:600;margin-bottom:6px;line-height:1.4;}
+.more-post-card small{font-size:0.75rem;color:var(--grey);}
+
+@media(max-width:600px){nav{padding:14px 20px;}.share-strip{flex-direction:column;}.share-btns{flex-wrap:wrap;}}
+</style>
+<link rel="icon" type="image/x-icon" href="../favicon.ico"/>
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png"/>
+<link rel="manifest" href="../site.webmanifest"/>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">Asad Khan</a>
+  <div class="nav-right">
+    <a href="../blog.html" class="back-btn"><i class="fas fa-arrow-left"></i> All Posts</a>
+    <a href="../index.html#contact" class="btn-hire">Hire Me ✨</a>
+  </div>
+</nav>
+
+<!-- Shown while loading -->
+<div class="loading-wrap" id="loadingWrap">
+  <div class="spinner"></div>
+  <p>Loading post...</p>
+</div>
+
+<!-- Post content (hidden until loaded) -->
+<div id="postWrap" style="display:none">
+  <div class="post-hero">
+    <div class="post-cat" id="postCat"></div>
+    <h1 class="post-title" id="postTitle"></h1>
+    <div class="post-meta" id="postMeta"></div>
+    <div class="post-author">
+      <img src="../images/asad-headshot.png" alt="Asad Khan"/>
+      <div class="post-author-info">
+        <strong>Asad Khan</strong>
+        <span>Digital Marketer · Faisalabad, Pakistan</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="post-thumb" id="postThumb"></div>
+
+  <div class="post-content">
+    <div class="post-tags" id="postTags"></div>
+    <div class="post-body" id="postBody"></div>
+
+    <div class="share-strip">
+      <div>
+        <h4>Did this help you?</h4>
+        <p>Share it with someone on their marketing journey.</p>
+      </div>
+      <div class="share-btns">
+        <a id="shareWA" href="#" target="_blank" class="share-btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a id="shareLI" href="#" target="_blank" class="share-btn li"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="more-posts">
+      <h3>More Posts</h3>
+      <div class="more-posts-grid" id="morePosts"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Get slug from URL: /posts/post-viewer.html?slug=my-post-slug
+function getSlug() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('slug') || '';
+}
+
+// Simple markdown → HTML (same as build script)
+function mdToHtml(md) {
+  if (!md) return '';
+  return md
+    .replace(/^### (.+)$/gm,'<h3>$1</h3>')
+    .replace(/^## (.+)$/gm,'<h2>$1</h2>')
+    .replace(/^# (.+)$/gm,'<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g,'<em>$1</em>')
+    .replace(/^> (.+)$/gm,'<blockquote>$1</blockquote>')
+    .replace(/^- (.+)$/gm,'<li>$1</li>')
+    .replace(/(<li>[\s\S]+?<\/li>)/g,'<ul>$1</ul>')
+    .replace(/^---$/gm,'<hr/>')
+    .split('\n\n').map(block => {
+      if (/^<[h|b|u|o|l]/.test(block.trim())) return block;
+      return block.trim() ? '<p>' + block.trim() + '</p>' : '';
+    }).join('\n');
+}
+
+async function loadPost() {
+  const slug = getSlug();
+
+  try {
+    const res  = await fetch('../posts.json?v=' + Date.now());
+    const posts = await res.json();
+
+    // Find by slug or id
+    const post = posts.find(p =>
+      p.slug === slug || String(p.id) === slug
+    ) || posts[0]; // fallback to first post
+
+    // Update page title
+    document.title = post.title + ' | Asad Khan';
+
+    // Category
+    document.getElementById('postCat').innerHTML =
+      `<i class="fas fa-tag"></i> ${post.category}`;
+
+    // Title
+    document.getElementById('postTitle').textContent = post.title;
+
+    // Meta
+    document.getElementById('postMeta').innerHTML = `
+      <span><i class="fas fa-calendar-alt"></i> ${post.date}</span>
+      <span><i class="fas fa-clock"></i> ${post.readTime}</span>`;
+
+    // Thumbnail
+    if (post.thumbnail) {
+      document.getElementById('postThumb').innerHTML =
+        `<img src="../${post.thumbnail}" alt="${post.title}"/>`;
+    }
+
+    // Tags
+    document.getElementById('postTags').innerHTML =
+      (post.tags||[]).map(t=>`<span class="post-tag">#${t}</span>`).join('');
+
+    // Body
+    const bodyEl = document.getElementById('postBody');
+    bodyEl.innerHTML = post.bodyHtml || mdToHtml(post.body || post.summary || '');
+
+    // Share links
+    const url = encodeURIComponent(window.location.href);
+    const txt = encodeURIComponent('Check this out: ' + post.title + ' by Asad Khan');
+    document.getElementById('shareWA').href = `https://wa.me/?text=${txt}%20${url}`;
+    document.getElementById('shareLI').href = `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+
+    // More posts (other posts excluding current)
+    const others = posts.filter(p => p.slug !== post.slug).slice(0,3);
+    document.getElementById('morePosts').innerHTML = others.map(p => `
+      <div class="more-post-card" onclick="window.location='post-viewer.html?slug=${p.slug}'">
+        <div class="more-post-cat">${p.category}</div>
+        <h4>${p.title}</h4>
+        <small>${p.date} · ${p.readTime}</small>
+      </div>`).join('');
+
+    // Show post, hide loader
+    document.getElementById('loadingWrap').style.display = 'none';
+    document.getElementById('postWrap').style.display = 'block';
+
+  } catch(e) {
+    document.getElementById('loadingWrap').innerHTML =
+      `<i class="fas fa-exclamation-circle" style="font-size:2rem;color:var(--red)"></i>
+       <p>Post not found. <a href="../blog.html" style="color:var(--red)">← Back to Blog</a></p>`;
+  }
+}
+
+loadPost();
+</script>
+</body>
+</html>
